@@ -33,4 +33,17 @@ func main() {
 
 	// SETTING A VALUE GREATER THAN THE SUPPORTED SPECIFIED BITS WILL CAUSE AN OVERFLOW
 
+	fmt.Println("==========ALIASES==========")
+
+	// There are also Alias to be used for documentation purposes like:+
+
+	// Rune is the same as an 32 bit integer, but is commonly used to say that the number
+	// should be considered as an special character, like when working with ASCII
+	var aliasNum rune = 32
+	fmt.Println("Rune alias:", aliasNum)
+
+	// Byte is the same as an 8 bit integer, because that's what a byte is
+	var byteNum byte = 64
+	fmt.Println("Byte alias:", byteNum)
+
 }

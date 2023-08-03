@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 
@@ -45,5 +48,36 @@ func main() {
 	// Byte is the same as an 8 bit integer, because that's what a byte is
 	var byteNum byte = 64
 	fmt.Println("Byte alias:", byteNum)
+
+	fmt.Println("==========STRINGS==========")
+
+	// Strings are defined with double quotes
+
+	var str1 string = "My name is Rogério"
+	fmt.Println("My name:", str1)
+
+	str2 := "I was born in 2002"
+	fmt.Println("My birth year:", str2)
+
+	// Single quotes return the integer/rune value of the character's ASCII value
+
+	char := 'a'
+	fmt.Println("letter a in ASCII:", char)
+
+	fmt.Println("==========ZERO VALUE==========")
+
+	// In Go, every data type has a zero value
+	// strings will be an empty string
+	// any number type will be 0, 0.0, imaginary 0 and real 0
+	// bool will be false
+	// map, channel, error, interface, slices and pointers will be nil
+
+	var zeroValue int8
+	fmt.Println("Zero value example:", zeroValue)
+
+	fmt.Println("==========ERROR==========")
+
+	var err error = errors.New("Interal error")
+	fmt.Println("Error:", err)
 
 }

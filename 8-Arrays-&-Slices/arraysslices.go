@@ -42,4 +42,38 @@ func main() {
 	arr2[1] = "Altered data"
 
 	fmt.Println("slc2 =", slc2)
+
+	// Internal arrays
+
+	fmt.Println("======INTERAL ARRAYS======")
+
+	slc3 := make([]float32, 10, 11)
+
+	fmt.Println("slc3:", slc3)
+	fmt.Println("slc3 length", len(slc3))
+	fmt.Println("slc3 capacity", cap(slc3))
+	fmt.Println("---------------------------")
+
+	slc3 = append(slc3, 5)
+	slc3 = append(slc3, 10)
+
+	// When an internal array capacity is reached, go creates a second one internally
+	// with the same capacity so you don't run out of space
+	fmt.Println("slc3:", slc3)
+	fmt.Println("slc3 length", len(slc3))
+	fmt.Println("slc3 capacity", cap(slc3))
+	fmt.Println("---------------------------")
+
+	slc4 := make([]float32, 5)
+	fmt.Println("slc4:", slc4)
+	fmt.Println("slc4 length", len(slc4))
+	fmt.Println("slc4 capacity", cap(slc4))
+	fmt.Println("---------------------------")
+
+	slc4 = append(slc4, 10)
+	slc4 = append(slc4, 20)
+	fmt.Println("slc4:", slc4)
+	fmt.Println("slc4 length", len(slc4))
+	fmt.Println("slc4 capacity", cap(slc4))
+	fmt.Println("---------------------------")
 }
